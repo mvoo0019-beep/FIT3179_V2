@@ -1,0 +1,19 @@
+Domain: 
+Dangers of the Australian sun.
+
+Introduction:
+Explore and visualise the potential health risks(heatstroke, skin cancer, etc.) that could be caused by the sunlight exposure in Australia. 
+
+Data sources:
+
+national uv exposure:
+https://www.bom.gov.au/climate/maps/averages/uv-index/
+
+uv exposure at different stations in Australia:
+https://data.gov.au/data/organization/australian-radiation-protection-and-nuclear-safety-agency-arpansa
+
+skin cancer data:
+https://www.canceraustralia.gov.au/cancer-types/melanoma-skin/melanoma-skin-statistics
+
+extreme weather hospitilisations:
+https://www.aihw.gov.au/reports/injury/extreme-weather-injuries/data
