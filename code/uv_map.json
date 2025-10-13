@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 700,
+    "height": 500,
+    "projection": {"type": "mercator"},
+  
+    "params": [
+      {
+        "name": "MonthSelect",
+        "value": "January",
+        "bind": {
+          "input": "select",
+          "name": "Month: ",
+          "options": [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+          ]
+        }
+      }
+    ],
+  
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
+          "format": {"type": "topojson", "feature":"ne_110m_admin_0_countries"}
+        },
+        "mark": {"type": "geoshape", "fill": "#f6f6f6", "stroke": "#ccc"}
+      },
+  
+      {
+        "data": {"url": "../data/uv_monthly_2024.csv"},
+        "transform": [{"filter": "datum.month == MonthSelect"}],
+        "mark": {"type": "circle", "opacity": 0.9, "stroke": "#fff", "strokeWidth": 1},
+        "encoding": {
+          "longitude": {"field": "lon", "type": "quantitative"},
+          "latitude": {"field": "lat", "type": "quantitative"},
+          "color": {
+            "field": "avg_uv",
+            "type": "quantitative",
+            "scale": {"scheme": "inferno"},
+            "title": "Avg UV Index"
+          },
+          "size": {"value": 400},
+          "tooltip": [
+            {"field": "city", "title": "City"},
+            {"field": "state", "title": "State"},
+            {"field": "month", "title": "Month"},
+            {"field": "avg_uv", "title": "Avg UV", "format": ".2f"}
+          ]
+        }
+      },
+  
+      {
+        "data": {"url": "../data/uv_monthly_2024.csv"},
+        "transform": [{"filter": "datum.month == MonthSelect"}],
+        "mark": {"type": "text", "dy": -10, "fontSize": 11, "fontWeight": "bold"},
+        "encoding": {
+          "longitude": {"field": "lon"},
+          "latitude": {"field": "lat"},
+          "text": {"field": "city"}
+        }
+      }
+    ]
+  }
+  
