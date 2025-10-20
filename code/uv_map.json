@@ -1,3 +1,6 @@
+
+
+
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
@@ -25,23 +28,27 @@
           "url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/js/AUS_2016_AUST.topojson",
           "format": {"type": "topojson", "feature":"AUS_2016_AUST"}
         },
-        "mark": {"type": "geoshape", "fill": "#lightgray", "stroke": "#white"}
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
       },
   
       {
-        "data": {"url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_monthly_2024.csv"},
-        "transform": [{"filter": "datum.month == MonthSelect"}],
-        "mark": {"type": "circle", "opacity": 0.9, "stroke": "#fff", "strokeWidth": 1},
+        "data": {
+          "url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_monthly_2024.csv"
+        },
+        "transform": [{
+          "filter": "datum.month == MonthSelect"
+        }],
+        "mark": {"type": "circle", "opacity": 0.9},
         "encoding": {
           "longitude": {"field": "lon", "type": "quantitative"},
           "latitude": {"field": "lat", "type": "quantitative"},
+          "size": {"value": 350},
           "color": {
             "field": "avg_uv",
             "type": "quantitative",
-            "scale": {"scheme": "reds"},
-            "title": "Avg UV Index"
+            "title": "Avg UV Index",
+            "scale": {"scheme": "reds"}
           },
-          "size": {"value": 400},
           "tooltip": [
             {"field": "city", "title": "City"},
             {"field": "state", "title": "State"},
