@@ -1,0 +1,54 @@
+
+
+
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 320,
+  
+    "data": {
+        "url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_monthly_2024.csv"
+    },
+
+    "selection": {
+        "City_Selection": {
+            "type": "multi",
+            "fields": ["city"],
+            "bind": "legend"
+        }
+    },
+  
+    "mark": {"type": "line", "point": true},
+  
+    "encoding": {
+        "x": {
+            "field": "month",
+            "type": "nominal",
+            "sort": [
+            "January","February","March","April","May","June","July","August","September","October","November","December"
+            ],
+            "title": "Month"
+        }, 
+        "y": {
+            "field": "avg_uv",
+            "type": "quantitative",
+            "title": "Average UV Index"
+        },
+        "color": {
+            "field": "city",
+            "type": "nominal",
+            "title": "City"
+        },
+        "opacity": {
+            "condition": {"selection": "City_Selection", "value": 0.9},
+            "value": 0.2
+        },
+        "tooltip": [
+            {"field": "city", "title": "City", "type": "nominal"},
+            {"field": "state", "title": "State", "type": "nominal"},
+            {"field": "month", "title": "Month", "type": "nominal"},
+            {"field": "avg_uv", "title": "Avg UV", "type": "quantitative", "format": ".2f"}
+        ]
+    }
+  }
+  
