@@ -1,0 +1,105 @@
+city,state,lat,lon,month,avg_uv
+Adelaide,SA,-34.95,138.52,January,2.58
+Adelaide,SA,-34.95,138.52,February,2.45
+Adelaide,SA,-34.95,138.52,March,1.75
+Adelaide,SA,-34.95,138.52,April,0.91
+Adelaide,SA,-34.95,138.52,May,0.49
+Adelaide,SA,-34.95,138.52,June,0.29
+Adelaide,SA,-34.95,138.52,July,0.37
+Adelaide,SA,-34.95,138.52,August,0.57
+Adelaide,SA,-34.95,138.52,September,0.96
+Adelaide,SA,-34.95,138.52,October,1.53
+Adelaide,SA,-34.95,138.52,November,1.93
+Adelaide,SA,-34.95,138.52,December,2.62
+Adelaide,SA,-34.95,138.52,Yearly Average,1.37
+Alice Springs,NT,-23.8,133.89,January,2.91
+Alice Springs,NT,-23.8,133.89,February,2.95
+Alice Springs,NT,-23.8,133.89,March,1.99
+Alice Springs,NT,-23.8,133.89,April,1.89
+Alice Springs,NT,-23.8,133.89,May,1.26
+Alice Springs,NT,-23.8,133.89,June,0.98
+Alice Springs,NT,-23.8,133.89,July,1.08
+Alice Springs,NT,-23.8,133.89,August,1.51
+Alice Springs,NT,-23.8,133.89,September,1.84
+Alice Springs,NT,-23.8,133.89,October,2.14
+Alice Springs,NT,-23.8,133.89,November,2.22
+Alice Springs,NT,-23.8,133.89,December,2.79
+Alice Springs,NT,-23.8,133.89,Yearly Average,1.96
+Canberra,ACT,-35.31,149.2,January,2.08
+Canberra,ACT,-35.31,149.2,February,1.98
+Canberra,ACT,-35.31,149.2,March,1.47
+Canberra,ACT,-35.31,149.2,April,0.84
+Canberra,ACT,-35.31,149.2,May,0.44
+Canberra,ACT,-35.31,149.2,June,0.31
+Canberra,ACT,-35.31,149.2,July,0.35
+Canberra,ACT,-35.31,149.2,August,0.59
+Canberra,ACT,-35.31,149.2,September,0.99
+Canberra,ACT,-35.31,149.2,October,1.42
+Canberra,ACT,-35.31,149.2,November,1.7
+Canberra,ACT,-35.31,149.2,December,2.57
+Canberra,ACT,-35.31,149.2,Yearly Average,1.23
+Gold Coast,QLD,-28.0,153.37,January,2.21
+Gold Coast,QLD,-28.0,153.37,February,2.22
+Gold Coast,QLD,-28.0,153.37,March,1.76
+Gold Coast,QLD,-28.0,153.37,April,1.27
+Gold Coast,QLD,-28.0,153.37,May,0.84
+Gold Coast,QLD,-28.0,153.37,June,0.69
+Gold Coast,QLD,-28.0,153.37,July,0.72
+Gold Coast,QLD,-28.0,153.37,August,0.99
+Gold Coast,QLD,-28.0,153.37,September,1.44
+Gold Coast,QLD,-28.0,153.37,October,1.81
+Gold Coast,QLD,-28.0,153.37,November,1.99
+Gold Coast,QLD,-28.0,153.37,December,2.47
+Gold Coast,QLD,-28.0,153.37,Yearly Average,1.53
+Kingston,TAS,-42.99,147.29,January,2.0
+Kingston,TAS,-42.99,147.29,February,1.87
+Kingston,TAS,-42.99,147.29,March,1.18
+Kingston,TAS,-42.99,147.29,April,0.57
+Kingston,TAS,-42.99,147.29,May,0.25
+Kingston,TAS,-42.99,147.29,June,0.15
+Kingston,TAS,-42.99,147.29,July,0.19
+Kingston,TAS,-42.99,147.29,August,0.3
+Kingston,TAS,-42.99,147.29,September,0.6
+Kingston,TAS,-42.99,147.29,October,1.13
+Kingston,TAS,-42.99,147.29,November,1.45
+Kingston,TAS,-42.99,147.29,December,2.09
+Kingston,TAS,-42.99,147.29,Yearly Average,0.98
+Melbourne,VIC,-37.73,145.1,January,2.15
+Melbourne,VIC,-37.73,145.1,February,2.13
+Melbourne,VIC,-37.73,145.1,March,1.48
+Melbourne,VIC,-37.73,145.1,April,0.68
+Melbourne,VIC,-37.73,145.1,May,0.43
+Melbourne,VIC,-37.73,145.1,June,0.27
+Melbourne,VIC,-37.73,145.1,July,0.26
+Melbourne,VIC,-37.73,145.1,August,0.51
+Melbourne,VIC,-37.73,145.1,September,0.74
+Melbourne,VIC,-37.73,145.1,October,1.35
+Melbourne,VIC,-37.73,145.1,November,1.75
+Melbourne,VIC,-37.73,145.1,December,2.45
+Melbourne,VIC,-37.73,145.1,Yearly Average,1.18
+Perth,WA,-31.93,115.98,January,2.99
+Perth,WA,-31.93,115.98,February,2.56
+Perth,WA,-31.93,115.98,March,1.98
+Perth,WA,-31.93,115.98,April,1.2
+Perth,WA,-31.93,115.98,May,0.63
+Perth,WA,-31.93,115.98,June,0.46
+Perth,WA,-31.93,115.98,July,0.49
+Perth,WA,-31.93,115.98,August,0.68
+Perth,WA,-31.93,115.98,September,1.26
+Perth,WA,-31.93,115.98,October,1.78
+Perth,WA,-31.93,115.98,November,2.16
+Perth,WA,-31.93,115.98,December,2.79
+Perth,WA,-31.93,115.98,Yearly Average,1.58
+Sydney,NSW,-34.04,151.1,January,2.19
+Sydney,NSW,-34.04,151.1,February,1.93
+Sydney,NSW,-34.04,151.1,March,1.52
+Sydney,NSW,-34.04,151.1,April,0.89
+Sydney,NSW,-34.04,151.1,May,0.5
+Sydney,NSW,-34.04,151.1,June,0.33
+Sydney,NSW,-34.04,151.1,July,0.43
+Sydney,NSW,-34.04,151.1,August,0.66
+Sydney,NSW,-34.04,151.1,September,1.04
+Sydney,NSW,-34.04,151.1,October,1.45
+Sydney,NSW,-34.04,151.1,November,1.68
+Sydney,NSW,-34.04,151.1,December,2.51
+Sydney,NSW,-34.04,151.1,Yearly Average,1.26
