@@ -9,7 +9,7 @@
   
     "params": [
       {
-        "name": "MonthSelect",
+        "name": "Month_Selection",
         "value": "January",
         "bind": {
           "input": "select",
@@ -38,7 +38,7 @@
         "transform": [{
           "filter": "datum.month == MonthSelect"
         }],
-        "mark": {"type": "circle", "opacity": 0.9},
+        "mark": {"type": "circle"},
         "encoding": {
           "longitude": {"field": "lon", "type": "quantitative"},
           "latitude": {"field": "lat", "type": "quantitative"},
@@ -50,17 +50,17 @@
             "scale": {"scheme": "reds"}
           },
           "tooltip": [
-            {"field": "city", "title": "City"},
-            {"field": "state", "title": "State"},
-            {"field": "month", "title": "Month"},
-            {"field": "avg_uv", "title": "Avg UV", "format": ".2f"}
+            {"field": "city", "title": "City", "type": "nominal"},
+            {"field": "state", "title": "State", "type": "nominal"},
+            {"field": "month", "title": "Month", "type": "nominal"},
+            {"field": "avg_uv", "title": "Avg UV", "type": "quantitative", "format": ".2f"}
           ]
         }
       },
   
       {
         "data": {"url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_monthly_2024.csv"},
-        "transform": [{"filter": "datum.month == MonthSelect"}],
+        "transform": [{"filter": "datum.month == Month_Selection"}],
         "mark": {"type": "text", "dy": -10, "fontSize": 11, "fontWeight": "bold"},
         "encoding": {
           "longitude": {"field": "lon"},
