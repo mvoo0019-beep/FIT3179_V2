@@ -10,12 +10,12 @@
     "params": [
       {
         "name": "Month_Selection",
-        "value": "January",
+        "value": "Yearly Average",
         "bind": {
           "input": "select",
           "name": "Month: ",
           "options": [
-            "January", "February", "March", "April", "May", "June",
+            "Yearly Average", "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
           ]
         }
@@ -36,7 +36,7 @@
           "url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_monthly_2024.csv"
         },
         "transform": [{
-          "filter": "datum.month == MonthSelect"
+          "filter": "datum.month == Month_Selection"
         }],
         "mark": {"type": "circle"},
         "encoding": {
@@ -47,7 +47,7 @@
             "field": "avg_uv",
             "type": "quantitative",
             "title": "Avg UV Index",
-            "scale": {"scheme": "reds"}
+            "scale": {"scheme": "reds", "domain": [0, 3]}
           },
           "tooltip": [
             {"field": "city", "title": "City", "type": "nominal"},
@@ -61,7 +61,7 @@
       {
         "data": {"url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_monthly_2024.csv"},
         "transform": [{"filter": "datum.month == Month_Selection"}],
-        "mark": {"type": "text", "dy": -10, "fontSize": 11, "fontWeight": "bold"},
+        "mark": {"type": "text", "dy": -12, "fontSize": 11, "fontWeight": "bold"},
         "encoding": {
           "longitude": {"field": "lon"},
           "latitude": {"field": "lat"},
