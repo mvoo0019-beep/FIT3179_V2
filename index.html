@@ -24,27 +24,19 @@
 
     <p> Intro paragraph</p>
 
-    <div class="pure-g">
-        <div class="pure-u-1-2">
-          <div class="description description-left">
-            <h2>Two Columns Layout</h2>
-            <p>Explanation text</p>
-          </div>
-        </div>
-        <div class="pure-u-1-2">
-          <div id="uv_map"></div>
-        </div>
-      </div>
+    <div id = "uv_map"></div>
+
+    <div id = "uv_line"></div>
 
     <script type = "text/javascript">
         var uv_map = "js/uv_map.json";
         var uv_line = "js/uv_line.json";
 
         vegaEmbed('#uv_map', uv_map).then(function(result) {
-        }).catch(consile.error);
+        }).catch(console.error);
 
         vegaEmbed('#uv_line', uv_line).then(function(result) {
-        }).catch(consolde.error);
+        }).catch(console.error);
 
     </script>
 
