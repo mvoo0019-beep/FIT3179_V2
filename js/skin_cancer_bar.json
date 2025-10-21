@@ -1,42 +1,52 @@
+
+
+
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 400,
-    "data": {
-      "url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/skin_cancer_age_sex.csv"
-    },
-    "mark": "bar",
-    "encoding": {
-      "x": {
-        "field": "Age_Group",
-        "type": "nominal",
-        "title": "Age Group (years)",
-        "sort": [
-          "0–4","5–9","10–14","15–19","20–24","25–29","30–34","35–39","40–44","45–49","50–54","55–59","60–64","65–69","70–74","75–79","80–84","85+"
-        ],
-        "axis": {"labelAngle": 0}
-      },
-      "y": {
-        "field": "Cases",
-        "type": "quantitative",
-        "title": "Incidence rate (per 100,000)"
-      },
-      "color": {
-        "field": "Sex",
-        "type": "nominal",
-        "title": "Sex",
-        "scale": {"range": ["#4e79a7", "#e15759"]}
-      },
-      "xOffset": {"field": "Sex"},
-      "tooltip": [
-        {"field": "Age_Group", "title": "Age Group"},
-        {"field": "Sex", "title": "Sex"},
-        {"field": "Cases", "title": "Number of Cases"}
-      ]
-    },
-    "config": {
-      "axis": {"labelFontSize": 11, "titleFontSize": 13},
-      "view": {"stroke": "transparent"}
-    }
-  }
-  
+		"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+		"width": 800,
+		"height": 400,
+
+		"data": {
+			"url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/skin_cancer_age_sex.csv"
+		},
+
+		"selection": {
+			"Sex_Selection": {
+				"type": "multi",
+				"fields": ["Sex"],
+				"bind": "legend"
+			}
+		},
+
+		"mark": "bar",
+
+		"encoding": {
+			"x": {
+				"field": "Age_Group",
+				"type": "nominal",
+				"title": "Age Group (years)",
+				"axis": {"labelAngle": 0}
+			},
+			"y": {
+				"field": "Cases",
+				"type": "quantitative",
+				"title": "Cases"
+			},
+			"color": {
+				"field": "Sex",
+				"type": "nominal",
+				"title": "Sex"
+			},
+			"xOffset": {"field": "Sex"},
+			"opacity": {
+				"condition": {"selection": "Sex_Selection", "value": 0.9},
+				"value": 0.2
+			},
+			"tooltip": [
+				{"field": "Age_Group", "title": "Age Group", "type":"nominal"},
+				{"field": "Sex", "title": "Sex","type":"nominal"},
+				{"field": "Cases", "title": "Number of Cases", "type":"quantitative"}
+			]
+		}
+	}
+	
