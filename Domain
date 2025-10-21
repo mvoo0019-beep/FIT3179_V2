@@ -2,7 +2,7 @@ Domain:
 Dangers of the Australian sun.
 
 Introduction:
-Explore and visualise the potential health risks(heatstroke, skin cancer, etc.) that could be caused by the sunlight exposure in Australia. 
+Explore and visualise the potential health risks(skin cancer) that could be caused by the sunlight exposure in Australia. 
 
 Data sources:
 
@@ -18,5 +18,5 @@ https://www.canceraustralia.gov.au/cancer-types/melanoma-skin/melanoma-skin-stat
 cancer data by age groups and population:
 https://www.aihw.gov.au/reports/cancer/cancer-data-in-australia/data
 
-extreme weather hospitilisations:
-https://www.aihw.gov.au/reports/injury/extreme-weather-injuries/data
+melanoma incidence and mortality rates:
+https://www.aihw.gov.au/reports/cancer/cancer-data-in-australia/contents/state-and-territory?
