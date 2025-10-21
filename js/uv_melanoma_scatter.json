@@ -1,0 +1,71 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"width": 600,
+	"height": 400,
+	"data": {
+		"url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_melanoma.csv"
+	},
+	"selection": {
+		"State_Selection": {
+			"type": "multi",
+			"fields": [
+				"State"
+			],
+			"bind": "legend"
+		}
+	},
+	"mark": {
+		"type": "point",
+		"filled": true,
+		"size": 120,
+		"opacity": 0.85
+	},
+	"encoding": {
+		"x": {
+			"field": "uv_index",
+			"type": "quantitative",
+			"title": "Average UV Index"
+		},
+		"y": {
+			"field": "melanoma_rate",
+			"type": "quantitative",
+			"title": "Melanoma Incidence Rate (per 100,000)"
+		},
+		"color": {
+			"field": "State",
+			"type": "nominal",
+			"title": "State"
+		},
+		"opacity": {
+			"condition": {
+				"selection": "State_Selection",
+				"value": 0.9
+			},
+			"value": 0.2
+		},
+		"tooltip": [
+			{
+				"field": "State",
+				"title": "State",
+				"type": "nominal"
+			},
+			{
+				"field": "uv_index",
+				"title": "Average UV",
+				"format": ".1f",
+				"type": "quantitative"
+			},
+			{
+				"field": "melanoma_rate",
+				"title": "Rate per 100k",
+				"format": ".1f",
+				"type": "quantitative"
+			}
+		]
+	},
+	"title": {
+		"text": "Correlation between UV Exposure and Melanoma Rates(2024)",
+		"anchor": "middle",
+		"fontSize": 16
+	}
+}

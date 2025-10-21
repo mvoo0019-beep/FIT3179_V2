@@ -1,72 +1,137 @@
-
-
-
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 550,
     "height": 350,
-    "projection": {"type": "mercator"},
-  
-    "params": [{
-        "value": "Yearly Average",
-        "bind": {
-            "input": "select",
-            "name": "Month: ",
-            "options": [
-                "Yearly Average", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
-            ]
-        },
-        "name": "Month_Selection"
+    "projection": {
+        "type": "mercator"
+    },
+    "params": [
+        {
+            "value": "Yearly Average",
+            "bind": {
+                "input": "select",
+                "name": "Month: ",
+                "options": [
+                    "Yearly Average",
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ]
+            },
+            "name": "Month_Selection"
         }
     ],
-  
-    "layer": [ {
-        "data": {
-            "url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/js/AUS_2016_AUST.topojson",
-            "format": {"type": "topojson", "feature":"AUS_2016_AUST"}
-        },
-        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
-        },
-  
+    "layer": [
         {
-        "data": {
-          "url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_monthly_2024.csv"
-        },
-        "transform": [{
-            "filter": "datum.month == Month_Selection"
-        }],
-        "mark": {"type": "circle"},
-        "encoding": {
-            "longitude": {"field": "lon", "type": "quantitative"},
-            "latitude": {"field": "lat", "type": "quantitative"},
-            "size": {"value": 350},
-            "color": {
-                "field": "avg_uv",
-                "type": "quantitative",
-                "title": "Avg UV Index",
-                "scale": {"scheme": "inferno", "domain": [0, 3]}
+            "data": {
+                "url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/js/AUS_2016_AUST.topojson",
+                "format": {
+                    "type": "topojson",
+                    "feature": "AUS_2016_AUST"
+                }
             },
-            "tooltip": [
-                {"field": "city", "title": "City", "type": "nominal"},
-                {"field": "state", "title": "State", "type": "nominal"},
-                {"field": "month", "title": "Month", "type": "nominal"},
-                {"field": "avg_uv", "title": "Avg UV", "type": "quantitative", "format": ".2f"}
-            ]
-        }
+            "mark": {
+                "type": "geoshape",
+                "fill": "lightgray",
+                "stroke": "white"
+            }
         },
-  
         {
-        "data": {"url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_monthly_2024.csv"},
-        "transform": [{"filter": "datum.month == Month_Selection"}],
-        "mark": {
-            "type": "text", "dy": -12, "fontSize": 11, "fontWeight": "bold"
+            "data": {
+                "url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_monthly_2024.csv"
+            },
+            "transform": [
+                {
+                    "filter": "datum.month == Month_Selection"
+                }
+            ],
+            "mark": {
+                "type": "circle"
+            },
+            "encoding": {
+                "longitude": {
+                    "field": "lon",
+                    "type": "quantitative"
+                },
+                "latitude": {
+                    "field": "lat",
+                    "type": "quantitative"
+                },
+                "size": {
+                    "value": 350
+                },
+                "color": {
+                    "field": "avg_uv",
+                    "type": "quantitative",
+                    "title": "Avg UV Index",
+                    "scale": {
+                        "scheme": "inferno",
+                        "domain": [
+                            0,
+                            3
+                        ]
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "city",
+                        "title": "City",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "state",
+                        "title": "State",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "month",
+                        "title": "Month",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "avg_uv",
+                        "title": "Avg UV",
+                        "type": "quantitative",
+                        "format": ".2f"
+                    }
+                ]
+            }
         },
-        "encoding": {
-            "longitude": {"field": "lon"},
-            "latitude": {"field": "lat"},
-            "text": {"field": "city"}
-        }
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_monthly_2024.csv"
+            },
+            "transform": [
+                {
+                    "filter": "datum.month == Month_Selection"
+                }
+            ],
+            "mark": {
+                "type": "text",
+                "dy": -12,
+                "fontSize": 11,
+                "fontWeight": "bold"
+            },
+            "encoding": {
+                "longitude": {
+                    "field": "lon"
+                },
+                "latitude": {
+                    "field": "lat"
+                },
+                "text": {
+                    "field": "city"
+                }
+            }
         }
     ]
 }
-  
