@@ -3,8 +3,8 @@
 
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 450,
+    "width": 550,
+    "height": 350,
     "projection": {"type": "mercator"},
   
     "params": [{
@@ -44,7 +44,7 @@
                 "field": "avg_uv",
                 "type": "quantitative",
                 "title": "Avg UV Index",
-                "scale": {"scheme": "reds", "domain": [0, 3]}
+                "scale": {"scheme": "inferno", "domain": [0, 3]}
             },
             "tooltip": [
                 {"field": "city", "title": "City", "type": "nominal"},
@@ -68,5 +68,5 @@
         }
         }
     ]
-  }
+}
   
