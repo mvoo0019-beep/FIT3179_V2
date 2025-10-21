@@ -1,0 +1,78 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"width": 400,
+	"height": 400,
+	"data": {
+		"url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/cancer_dist_2024.csv"
+	},
+
+	"transform": [
+		{
+			"calculate": "toNumber(replace(datum.Cases, ',', ''))",
+			"as": "Count"
+		}
+	],
+
+	"selection": {
+			"Cancer_Selection": {
+				"type": "multi",
+				"fields": ["Cancer_Type"],
+				"bind": "legend"
+			}
+		},
+
+	"mark": {
+		"type": "arc",
+		"innerRadius": 80,
+		"outerRadius": 150
+	},
+
+	"encoding": {
+		"theta": {
+			"field": "Count",
+			"type": "quantitative",
+			"title": "Cases"
+		},
+		"color": {
+			"field": "Cancer_Type",
+			"type": "nominal",
+			"title": "Cancer Type",
+			"scale": {
+				"scheme": "tableau10"
+			},
+			"legend": {
+				"orient": "right"
+			}
+		},
+		"order": {
+			"field": "Count",
+			"type": "quantitative",
+			"sort": "descending"
+		},
+
+		"opacity": {
+				"condition": {"selection": "Cancer_Selection", "value": 0.9},
+				"value": 0.2
+			},
+
+		"tooltip": [
+			{
+				"field": "Cancer_Type",
+				"title": "Cancer Type",
+				"type": "nominal"
+			},
+			{
+				"field": "Count",
+				"title": "Estimated Cases",
+				"format": ",",
+				"type": "quantitative"
+			}
+		]
+	},
+
+	"title": {
+		"text": "Estimated Cancer Incidence in Australia (2024)",
+		"fontSize": 16,
+		"anchor": "middle"
+	}
+}
