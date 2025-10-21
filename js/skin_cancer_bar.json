@@ -27,7 +27,8 @@
 		"y": {
 			"field": "Cases",
 			"type": "quantitative",
-			"title": "Cases"
+			"title": "Cases",
+			"stack": null
 		},
 		"color": {
 			"field": "Sex",
