@@ -30,6 +30,32 @@ h6 {
   font-size: .9rem;
 }
 
+.footer {
+  background: #f8f9fa;
+  border-top: 1px solid #e2e2e2;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.footer a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .license {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+
 /* responsive */
 @media (max-width: 768px) {
   .tight > [class*="pure-u"] { padding-left: .25rem; padding-right: .25rem; }
