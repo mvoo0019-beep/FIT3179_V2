@@ -62,10 +62,5 @@
 				"type": "quantitative"
 			}
 		]
-	},
-	"title": {
-		"text": "Correlation between UV Exposure and Melanoma Rates(2024)",
-		"anchor": "middle",
-		"fontSize": 16
 	}
 }

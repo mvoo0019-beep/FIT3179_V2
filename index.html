@@ -22,49 +22,105 @@
 </head>
 <body>
 
-    <header class="banner">
-        <h1>UV & Skin Cancer in Australia (2024)</h1>
-      </header>
-    
-      <main class="pure-g row-gap">
-        <!-- Row 1 -->
-        <section class="pure-u-1 pure-u-md-2-3 card">
-          <h2>UV Map by Month</h2>
-          <p class="caption">Select a month on the map to compare city UV levels.</p>
-          <div id="uv_map" class="vis-container"></div>
-        </section>
-    
-        <section class="pure-u-1 pure-u-md-1-3 card">
-          <h2>Monthly UV Trends</h2>
-          <p class="caption">Click legend to focus on cities.</p>
-          <div id="uv_line" class="vis-container"></div>
-        </section>
-    
-        <!-- Row 2 -->
-        <section class="pure-u-1 pure-u-md-2-3 card">
-          <h2>UV vs Melanoma</h2>
-          <p class="caption">Each point is a state, click legend to focus on cities.</p>
-          <div id="uv_melanoma_scatter" class="vis-container"></div>
-        </section>
-    
-        <section class="pure-u-1 pure-u-md-1-3 card">
-          <h2>Cancer Type Distribution</h2>
-          <p class="caption">Estimated cancer type incidences (Australia, 2024).</p>
+  <header class="banner">
+    <h1>UV Exposure & Skin Cancer in Australia (2024)</h1>
+  </header>
+  
+  <main class="pure-g container">
+  
+    <!-- 1) Introduction paragraph + donut -->
+    <section class="pure-u-1 card">
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div class="description description-left">
+            <h2>Introduction</h2>
+            <p class="muted">UV light exposure in Australia is among the highest in the world due to the country's closeness to the equator and clear skies,
+              leading to the country also having one of the highest skin cancer rates in the world. The donut chart on the right shows melanoma, the most 
+              dangerous type of skin cancer having one of the highest estimated incidence rates among all types of cancer in Australia. This dashboard will explore UV exposure around the
+            country, regional UV exposure trends, demographic skin cancer rates, and finally the correlation between UV exposure and skin cancer rates.</p>
+          </div>
+        </div>
+        <div class="pure-u-1-2">
+          <h5>Estimated cancer type incidence in Australia (2024)</h5>
+          <h6>Click on the legend to highlight cancer type</h6>
           <div id="cancer_type_donut" class="vis-container"></div>
-        </section>
-    
-        <!-- Row 3 -->
-        <section class="pure-u-1 card">
-          <h2>Skin Cancer by Age & Sex</h2>
-          <p class="caption">Grouped bars show incidence rates per 100k.</p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Combined UV Map + Line Chart Card -->
+    <section class="pure-u-1 card">
+      <h3>Seasonal and Regional UV Exposure</h3>
+      <p class="muted">
+        This section explores how ultraviolet (UV) exposure varies across Australian cities. 
+        The map highlights average UV levels for each city and month, while the line chart shows 
+        how UV intensity changes throughout the year. Northern and western regions consistently have
+        higher UV levels, while the south eastern cities have lower average UV exposure. Overall, the 
+        UV exposure drops as winter approaches, then rises again towards summer.
+      </p>
+
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div class="description description-left">
+            <h5>UV exposure in Australian cities (2024)</h5>
+            <h6>Use selector to select months</h6>
+            <div id="uv_map" class="vis-container"></div>
+          </div>
+        </div>
+        <div class="pure-u-1-2">
+          <h5>Monthly UV trends in Australian cities (2024)</h5>
+          <h6>Click legend to select city</h6>
+          <div id="uv_line" class="vis-container"></div>
+        </div>
+      </div>
+    </section>
+
+  
+    <!-- 4) Text + bar -->
+    <section class="pure-u-1 card">
+      <div class="pure-g tight middle">
+        <div class="pure-u-1 pure-u-md-1-3">
+          <h4>Skin Cancer by Age & Sex</h4>
+          <p class="muted">
+            Skin cancer risk rises steeply with age and is higher in females until the 40-44 group, then males
+            consistently have higher rates at higher age groups. Older men are especially vulnerable, 
+            likely due to greater outdoor activity and less consistent sunscreen use. These findings highlight the need for 
+            gender- and age-specific prevention strategies.
+          </p>
+        </div>
+      
+        <div class="pure-u-1 pure-u-md-2-3">
+          <h5>Skin cancer incidence rate by sex (per 100k population)</h5>
+        <h6>Click legend to select sex</h6>
           <div id="skin_cancer_bar" class="vis-container"></div>
-        </section>
-      </main>
+        </div>
+      </div>
+    </section>
+  
+    <!-- 5) Scatter + text -->
+    <section class="pure-u-1 card">
+      <h4>Correlation</h4>
+      <div class="pure-g">
+        <div class="pure-u-2-3">
+          <h5>Correlation between UV exposure and Melanoma incidence rates (2024)</h5>
+          <h6>Click legend to select state</h6>
+          <div id="uv_melanoma_scatter" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+              <p>This scatter plot shows the relationship between UV exposure and melanoma incidence rate (per 100k population) in Australian cities. It
+                shows a very slight positive correlation between the two variables across Australia. The states like Queensland, Western Australia and Northern
+                Territories have the highest UV exposures and are also among the highest in melanoma incidence rates. This shows that UV exposure can be a
+                strong cause for skin cancer incidence, and the importance of uv protection.
+                
+              </p>
+          </div>
+        </div>
     
-      <footer class="footnotes">
-        <p><strong>Sources:</strong> UV (2024) — data.gov.au/ARPANSA/BoM; Melanoma incidence — AIHW (age-standardised per 100k).</p>
-        <p>Notes: fixed UV scale for comparability; months ordered Jan→Dec; correlation based on state rates for 2024.</p>
-      </footer>
+      </div>
+    
+  </main>
+  
 
     <script type = "text/javascript">
         var uv_map = "js/uv_map.json";

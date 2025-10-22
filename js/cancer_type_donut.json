@@ -36,7 +36,7 @@
 			"type": "nominal",
 			"title": "Cancer Type",
 			"scale": {
-				"scheme": "tableau10"
+				"scheme": "tableau20"
 			}
 		},
 		"order": {
@@ -64,10 +64,5 @@
 				"type": "quantitative"
 			}
 		]
-	},
-	"title": {
-		"text": "Estimated Cancer Incidence in Australia (2024)",
-		"fontSize": 16,
-		"anchor": "middle"
 	}
 }

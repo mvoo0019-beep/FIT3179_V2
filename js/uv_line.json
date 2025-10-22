@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 450,
+    "width": 375,
     "height": 200,
     "data": {
         "url": "https://raw.githubusercontent.com/mvoo0019-beep/FIT3179_V2/main/data/uv_monthly_2024.csv"
